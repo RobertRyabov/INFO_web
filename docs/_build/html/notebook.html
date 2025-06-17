@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Jupyter Book Tutorial" href="home.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fnotebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-description">Variable description</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-ratio-variables">Continuous / Ratio Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-ordinal-variables">Discrete / Ordinal Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-nominal-variables">Discrete / Nominal Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-ratio-variables">Discrete / Ratio Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-that-are-used-in-this-project">Variables that are used in this project:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-perspective">First perspective</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1">Argument 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#social-media-fosters-communication-and-collaboration-with-a-nuanced-impact-on-productivity">Social Media Fosters Communication and Collaboration, with a Nuanced Impact on Productivity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2">Argument 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moderate-social-media-use-boosts-job-satisfaction-and-emotional-engagement">Moderate Social Media Use Boosts Job Satisfaction and Emotional Engagement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p>In today’s connected world, social media is a double-edged sword. While some say it is a powerful tool for networking, learning, and efficient communication, others struggle with distraction, addiction, and declining mental health. Our data story explores this dichotomy by analyzing how social media habits impact productivity, well-being, and job satisfaction among students and professionals.</p>
+<p>Using three datasets—including Students’ Social Media Addiction and Social Media vs. Productivity—we’ll visualize key trends, such as correlations between screen time and stress levels or addiction scores and academic performance. Through scatter plots, box plots, and other graphs, we aim to provide new insightful information to the public.</p>
+<p>Our goal is to provide data-driven insights to users so we give them the chance to make thoughtful decisions.</p>
+<section id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Robert Quarshie, 1465836</p></li>
+<li><p>Bo Wessel, 14043009</p></li>
+<li><p>Robert Ryabov, 15475255</p></li>
+<li><p>Trayvaun Palmer, 14654164</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="datasets">
+<h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">#</a></h1>
+<p>For this project we made use of three datasets. The way we assembled the datasets is, each group member searched the internet for multiple datasets about the subject. Then we compared them to choose the three that fitted the best together and covered the most of our interest. All three were found on Kaggle and have the following names: <em>Students’ Social Media Addiction</em>, <em>Social Media vs Productivity</em> and <em>Mobile Device Usage and User Behavior Dataset</em>.</p>
+<section id="variable-description">
+<h2>Variable description<a class="headerlink" href="#variable-description" title="Link to this heading">#</a></h2>
+<section id="continuous-ratio-variables">
+<h3>Continuous / Ratio Variables<a class="headerlink" href="#continuous-ratio-variables" title="Link to this heading">#</a></h3>
+<p>Avg_Daily_Usage_Hours, Sleep_Hours_Per_Night, daily_social_media_time, work_hours_per_day, sleep_hours, screen_time_before_sleep, weekly_offline_hours, App Usage Time (minutes), Screen On Time (hours), Battery Drain (mAh) andData Usage (megabytes).</p>
+</section>
+<section id="discrete-ordinal-variables">
+<h3>Discrete / Ordinal Variables<a class="headerlink" href="#discrete-ordinal-variables" title="Link to this heading">#</a></h3>
+<p>Academic_Level, Mental_Health_Score, Addicted_Score, perceived_productivity_score, actual_productivity_score, stress_level, job_satisfaction_score and User Behavior Class (1 to 5).</p>
+</section>
+<section id="discrete-nominal-variables">
+<h3>Discrete / Nominal Variables<a class="headerlink" href="#discrete-nominal-variables" title="Link to this heading">#</a></h3>
+<p>Student_ID, Gender, Country, Most_Used_Platform, Affects_Academic_Performance, Relationship_Status, gender, job_type, social_platform_preference, uses_focus_apps, has_digital_wellbeing_enabled, User ID, Device Model and Operating System (iOS/Android).</p>
+</section>
+<section id="discrete-ratio-variables">
+<h3>Discrete / Ratio Variables<a class="headerlink" href="#discrete-ratio-variables" title="Link to this heading">#</a></h3>
+<p>Age, Conflicts_Over_Social_Media, number_of_notifications, breaks_during_work, coffee_consumption_per_day, days_feeling_burnout_per_month and Number of Apps Installed.</p>
+</section>
+<section id="variables-that-are-used-in-this-project">
+<h3>Variables that are used in this project:<a class="headerlink" href="#variables-that-are-used-in-this-project" title="Link to this heading">#</a></h3>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preprocessing">
+<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h1>
+<p>The dataset contains various digital behavior metrics, well-being scores, and demographic variables collected from different sources. To ensure consistency, we first standardized column names and structures. Variables measuring similar concepts were identified and merged—for example, Sleep_Hours_Per_Night and sleep_hours were consolidated into a single daily_sleep_hours variable.
+Redundant or irrelevant columns (e.g., Student_ID, User ID) were removed, as they do not contribute to the statistical analysis. Some device-specific variables (e.g., Device Model, Battery Drain) were excluded since they are more relevant for technical analysis rather than behavioral studies.</p>
+<p>Next, we examined each variable’s unique values and adjusted them for consistency:</p>
+<ul class="simple">
+<li><p><strong>Continuous variables</strong> (e.g., Avg_Daily_Usage_Hours, Screen On Time) were checked for outliers and normalized where necessary.</p></li>
+<li><p><strong>Ordinal scales</strong> (e.g., Mental_Health_Score, stress_level) were validated to ensure proper ranking (e.g., confirming that higher numbers indicate worse stress).</p></li>
+<li><p><strong>Nominal categories</strong> (e.g., Most_Used_Platform, social_platform_preference) were grouped where possible (e.g., merging “Instagram” and “IG” into a single category).
+After this we end up with a clean dataset which can be used to do further research with.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="first-perspective">
+<h1>First perspective<a class="headerlink" href="#first-perspective" title="Link to this heading">#</a></h1>
+<section id="argument-1">
+<h2>Argument 1<a class="headerlink" href="#argument-1" title="Link to this heading">#</a></h2>
+<section id="social-media-fosters-communication-and-collaboration-with-a-nuanced-impact-on-productivity">
+<h3>Social Media Fosters Communication and Collaboration, with a Nuanced Impact on Productivity<a class="headerlink" href="#social-media-fosters-communication-and-collaboration-with-a-nuanced-impact-on-productivity" title="Link to this heading">#</a></h3>
+<p>Platforms such as Slack, LinkedIn, and Twitter have become essential tools for networking, information exchange, and teamwork, particularly in remote or hybrid work environments. These platforms help bridge communication gaps and streamline workflows.
+Our dataset of 25,751 respondents indicates an average daily social media use of approximately 3.11 hours and a mean perceived productivity score of 5.51 (on a scale where higher scores represent greater productivity). A small but statistically significant negative correlation exists between daily social media time and perceived productivity (Pearson’s r = -0.12, p &lt; 0.001). This suggests that productivity tends to decrease slightly as social media use increases, though the effect size remains modest.
+Figure 1 visualizes this relationship, where the scatter plot with a regression line reveals a subtle downward trend. This indicates that while excessive social media use might detract from productivity, moderate engagement can still play a valuable role in enhancing communication and collaboration, indirectly supporting productivity and job satisfaction.
+These findings underscore the importance of mindful social media use to maximize its benefits while minimizing potential distractions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> plot_productivity.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">File</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">INFO_web</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">plot_productivity</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">pearsonr</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">df_addiction</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;social_media_vs_productivity.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Check if column exists</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="argument-2">
+<h2>Argument 2<a class="headerlink" href="#argument-2" title="Link to this heading">#</a></h2>
+<section id="moderate-social-media-use-boosts-job-satisfaction-and-emotional-engagement">
+<h3>Moderate Social Media Use Boosts Job Satisfaction and Emotional Engagement<a class="headerlink" href="#moderate-social-media-use-boosts-job-satisfaction-and-emotional-engagement" title="Link to this heading">#</a></h3>
+<p>Beyond productivity, social media offers emotional benefits such as social support, motivational content, and mental breaks. Our analysis shows that participants who use social media moderately—between 2 to 4 hours per day—tend to report slightly higher job satisfaction scores compared to both low and very high users. Figure 2 illustrates these trends, indicating that moderate users generally experience greater emotional engagement and well-being in their work or study environments.</p>
+<p>To further explore this relationship, we categorized social media usage into four groups: Low (0–2 hours), Moderate (2–4 hours), High (4–6 hours), and Very High (6+ hours). The number of participants per group ranged from 1,748 in the Very High category to 9,318 in the Moderate category, providing a solid sample for comparison.</p>
+<p>Interestingly, median job satisfaction scores were quite similar across categories:</p>
+<ul class="simple">
+<li><p>Low usage: 4.94</p></li>
+<li><p>Moderate usage: 4.96</p></li>
+<li><p>High usage: 4.97</p></li>
+<li><p>Very High usage: 4.89</p></li>
+</ul>
+<p>Mean job satisfaction scores followed a similar pattern, with standard deviations near 2.1 across all groups. These results suggest that job satisfaction remains relatively stable regardless of social media usage intensity.</p>
+<p>The boxplot in Figure 2 reinforces this by showing overlapping distributions of job satisfaction scores across the usage groups, indicating no strong positive or negative effect. Therefore, while moderate social media use may contribute to emotional engagement, job satisfaction appears robust across varying levels of social media activity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> job_satisfection.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of users in each social media usage category:
+usage_category
+Low          7647
+Moderate     9318
+High         6038
+Very High    1748
+Name: count, dtype: int64
+
+Median Job Satisfaction Score by Social Media Usage Category:
+usage_category
+Low          4.944690
+Moderate     4.955939
+High         4.972374
+Very High    4.890567
+Name: job_satisfaction_score, dtype: float64
+
+Mean ± SD Job Satisfaction Score by Social Media Usage Category:
+Low: 4.95 ± 2.13
+Moderate: 4.97 ± 2.12
+High: 4.99 ± 2.11
+Very High: 4.87 ± 2.09
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/Apple/Desktop/INFO_web/docs/job_satisfection.py:23: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  median_satisfaction = df_clean.groupby(&#39;usage_category&#39;)[&#39;job_satisfaction_score&#39;].median()
+/Users/Apple/Desktop/INFO_web/docs/job_satisfection.py:28: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  mean_satisfaction = df_clean.groupby(&#39;usage_category&#39;)[&#39;job_satisfaction_score&#39;].mean()
+/Users/Apple/Desktop/INFO_web/docs/job_satisfection.py:29: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  std_satisfaction = df_clean.groupby(&#39;usage_category&#39;)[&#39;job_satisfaction_score&#39;].std()
+</pre></div>
+</div>
+<img alt="_images/6ec6fd55dec7e1bcd4d9b9c580908f991b66a244a473c5a0c6517f2ffcf72c7a.png" src="_images/6ec6fd55dec7e1bcd4d9b9c580908f991b66a244a473c5a0c6517f2ffcf72c7a.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>While social media facilitates communication and collaboration in professional settings, its impact on productivity and job satisfaction is nuanced. The data reveals a slight but significant decline in perceived productivity with increased usage (<em>r</em> = −0.12), suggesting that excessive use may detract from efficiency. Conversely, job satisfaction remains stable across all usage levels, with no meaningful differences between low, moderate, or high social media engagement. These findings underscore the importance of mindful usage: leveraging social media’s networking benefits while avoiding overuse that could impair productivity. Rather than framing it as a tool that inherently boosts satisfaction or performance, the evidence positions social media as a neutral factor whose value depends on intentionality and context.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="home.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter Book Tutorial</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authors">Authors</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-description">Variable description</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-ratio-variables">Continuous / Ratio Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-ordinal-variables">Discrete / Ordinal Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-nominal-variables">Discrete / Nominal Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-ratio-variables">Discrete / Ratio Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-that-are-used-in-this-project">Variables that are used in this project:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#first-perspective">First perspective</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-1">Argument 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#social-media-fosters-communication-and-collaboration-with-a-nuanced-impact-on-productivity">Social Media Fosters Communication and Collaboration, with a Nuanced Impact on Productivity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-2">Argument 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moderate-social-media-use-boosts-job-satisfaction-and-emotional-engagement">Moderate Social Media Use Boosts Job Satisfaction and Emotional Engagement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
